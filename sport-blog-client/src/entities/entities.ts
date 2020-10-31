@@ -11,3 +11,10 @@ export interface GameData {
 export interface IAction {
     type:string
 }
+
+export interface GameComment {
+    ID: number,
+    GAME_COMMENT: string,
+    GAME_ID: number,
+    COMMENT_TIME: Date
+}

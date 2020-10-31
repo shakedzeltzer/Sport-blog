@@ -15,7 +15,7 @@ export function previewedGamesUpdate(previewedGamesArr: GameData[]): IActionPrev
   };
 }
 
-export function generateMazeMatrix(category: string): ThunkAction<void, IState, undefined, IAction> {
+export function fetchPreviewdGames(category: string): ThunkAction<void, IState, undefined, IAction> {
   return (dispatch, getState) => {
       fetch(`http://localhost:2000/games/${category}`)
       .then ((res) => res.json())

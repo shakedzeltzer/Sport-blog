@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { navbarTitles } from "../../../constants";
-import { generateMazeMatrix } from "../../../store/actions/gamesAction";
+import { fetchPreviewdGames } from "../../../store/actions/gamesAction";
 import { IState } from "../../../store/reducers/reducer";
 import NavbarTitles, { IPropsIn, IPropsOut } from "../presentation/navbarTitles";
 
@@ -16,7 +16,7 @@ const mapStateToProps = (state: IState, ownProps:ownProps): IPropsIn => {
 const mapDispatchToProps = (dispatch: any): IPropsOut => {
     return {
         routeClick: (category) => {
-            dispatch(generateMazeMatrix(category))
+            dispatch(fetchPreviewdGames(category))
         }
     }
 }

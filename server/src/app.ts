@@ -29,6 +29,7 @@ app.get('/comments/:gameId', (req, res) => {
 })
 
 app.post('/comment', (req, res) => {
+    console.log("Body", req.body)
     insertGameComment(req.body, () => {
         res.send("Ok")
     });

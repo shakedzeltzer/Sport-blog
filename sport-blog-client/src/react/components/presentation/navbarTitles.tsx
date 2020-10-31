@@ -34,7 +34,7 @@ const NavbarTitles: React.FC<IProps> = (props) => {
           key={index}
           className={classes.link}
           to={`/${title.route}`}
-          onClick={() => props.routeClick(title.route)}
+          // onClick={() => props.routeClick(title.route)}
         >
           <Button color="inherit" key={title.title} className={classes.title}>
             {title.title}
