@@ -1,7 +1,7 @@
 const mySqlConnection = {
     host: '127.0.0.1',
     user: 'root',
-    password: 'mysql4320',
+    password: '',
     database: 'sport-blog'
 }
 
