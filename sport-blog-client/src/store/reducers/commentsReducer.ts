@@ -1,5 +1,4 @@
-import { GameComment, GameData, IAction } from "../../entities/entities";
-import { SET_CHOSEN_GAME, IActionSetChosenGame } from "../actions/chosenGameAction";
+import { GameComment, IAction } from "../../entities/entities";
 import { IActionSetPreviewdComments, SET_PREVIEWD_COMMENTS } from "../actions/commentsAction";
 
 

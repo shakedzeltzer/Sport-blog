@@ -1,5 +1,4 @@
 import React from "react";
-import { navbarTitles } from "../../../constants";
 import Routes from "../presentation/routes";
 import "./App.css";
 

@@ -26,6 +26,8 @@ const useStyles = makeStyles({
   },
   container: {
     width: "60%",
+    maxHeight: "80vh",
+    overflowY: "auto",
   },
   link: {
     textDecoration: "none",
@@ -49,14 +51,14 @@ const FootballPage: React.FC<IProps> = ({
       <div className={classes.container}>
         {previewedGamesArr.map((gameData, index) => (
           <Link
+            key={index}
             to="/comments"
             className={classes.link}
             onClick={() => setChosenGame(gameData)}
           >
             <GamePreview
-              key={index}
               gameData={gameData}
-              imageUrl={basketballImagesArr[index]}
+              imageUrl={basketballImagesArr[index % basketballImagesArr.length]}
             ></GamePreview>
           </Link>
         ))}

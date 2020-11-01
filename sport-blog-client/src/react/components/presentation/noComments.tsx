@@ -6,7 +6,6 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
-import { GameComment } from "../../../entities/entities";
 
 interface IPropsIn {}
 

@@ -1,4 +1,3 @@
-import { gameData } from "../../constants";
 import { GameComment, GameData, IAction } from "../../entities/entities";
 import { chosenGameReducer } from "./chosenGameReducer";
 import { commentsReducer } from "./commentsReducer";

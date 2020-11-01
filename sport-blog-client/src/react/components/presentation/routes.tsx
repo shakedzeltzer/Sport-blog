@@ -4,7 +4,6 @@ import { navbarTitles } from "../../../constants";
 import { BasketballPageLink } from "../app/basketballPageLink";
 import { CommentPageLink } from "../app/commentsPageLink";
 import { FootballPageLink } from "../app/footballPageLink";
-import CommentsPage from "./commentsPage";
 import Navbar from "./navbar";
 
 interface IProps {}

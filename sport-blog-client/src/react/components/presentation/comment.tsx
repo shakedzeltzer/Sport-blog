@@ -1,4 +1,3 @@
-import classes from "*.module.css";
 import {
   Avatar,
   Card,
@@ -8,7 +7,6 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
-import { gameData } from "../../../constants";
 import { GameComment } from "../../../entities/entities";
 interface IPropsIn {
   comment: GameComment;
@@ -35,6 +33,10 @@ const useStyles = makeStyles({
 const Comment: React.FC<IProps> = ({ comment }) => {
   const classes = useStyles();
 
+  const refactorDate = (gameDate: Date): string => {
+    return gameDate.toString().replace("T", " ").replace(".000Z", "");
+  };
+
   return (
     <Card className={classes.root}>
       <CardActionArea className={classes.container}>
@@ -43,7 +45,7 @@ const Comment: React.FC<IProps> = ({ comment }) => {
             {comment.GAME_COMMENT}
           </Typography>
           <Typography gutterBottom variant="h5" component="h2">
-            {comment.COMMENT_TIME}
+            {refactorDate(comment.COMMENT_TIME)}
           </Typography>
         </CardContent>
         <Avatar src="/broken-image.jpg" />

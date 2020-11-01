@@ -19,9 +19,9 @@ export function fetchPreviewdGames(category: string): ThunkAction<void, IState, 
   return (dispatch, getState) => {
       fetch(`http://localhost:2000/games/${category}`)
       .then ((res) => res.json())
-        .then((res) => {     
-          console.log(res);
-        dispatch(previewedGamesUpdate(res))
+        .then((gameData:GameData[]) => {     
+          console.log(gameData);
+          dispatch(previewedGamesUpdate(gameData))
       });
   };
 }

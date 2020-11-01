@@ -1,15 +1,5 @@
-import classes from "*.module.css";
-import {
-  Avatar,
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Button, Card, CardContent, makeStyles } from "@material-ui/core";
 import React, { useState } from "react";
-import { GameComment } from "../../../entities/entities";
 
 interface IPropsIn {
   gameId: number;

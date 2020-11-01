@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-import { gameData } from "../../../constants";
 import { IState } from "../../../store/reducers/reducer";
 import CommentsPage, { IPropsIn, IPropsOut } from "../presentation/commentsPage";
 import basketball2 from '../../../assets/basketball2.jpg'

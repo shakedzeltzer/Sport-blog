@@ -1,5 +1,5 @@
 import { ThunkAction } from "redux-thunk";
-import { IAction, GameData, GameComment } from "../../entities/entities";
+import { IAction, GameComment } from "../../entities/entities";
 import { IState } from "../reducers/reducer";
 
 export const SET_PREVIEWD_COMMENTS = "SET_PREVIEWD_COMMENTS";

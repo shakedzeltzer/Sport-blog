@@ -30,6 +30,11 @@ const useStyles = makeStyles({
   container: {
     width: "60%",
   },
+  commentsDiv: {
+    height: "50vh",
+    maxHeight: "50vh",
+    overflowY: "auto",
+  },
 });
 
 const CommentsPage: React.FC<IProps> = ({
@@ -49,13 +54,15 @@ const CommentsPage: React.FC<IProps> = ({
     <div className={classes.background}>
       <div className={classes.container}>
         <GamePreview gameData={gameData} imageUrl={imageUrl}></GamePreview>
-        {previewedComments.length > 0 ? (
-          previewedComments.map((comment) => (
-            <Comment comment={comment}></Comment>
-          ))
-        ) : (
-          <NoComment></NoComment>
-        )}
+        <div className={classes.commentsDiv}>
+          {previewedComments.length > 0 ? (
+            previewedComments.map((comment, index) => (
+              <Comment key={index} comment={comment}></Comment>
+            ))
+          ) : (
+            <NoComment></NoComment>
+          )}
+        </div>
         <AddComment
           gameId={gameData.ID}
           onCommentAdd={onCommentAdd}
